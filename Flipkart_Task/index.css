@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, Arial, sans-serif;
+  background-color: #f1f3f6;
+  /* overflow-x: auto; */
+}
+
+/* Navbar Section */
+nav {
+  height: 50px;
+  background-color: #2874f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flipkart_logo img {
+  height: 20px;
+  width: 80px;
+  margin-top: 2px;
+}
+
+.flipkart_logo2 a {
+  color: aliceblue;
+  font-size: 11px;
+  display: block;
+  margin-top: -3px;
+  font-style: italic;
+  text-decoration: none;
+}
+
+.flipkart_logo2 span {
+  color: #ffe500;
+  font-weight: 600;
+}
+
+.search_box {
+  background-color: white;
+  padding: 10px;
+  height: 35px;
+  margin-left: 15px;
+  color: #2370f4;
+  box-shadow: 0 2px 4px 0 rgb(0 0 0 / 23%);
+  border-radius: 1px;
+  cursor: pointer;
+}
+
+.search_box input {
+  width: 400px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.menu {
+  margin-left: 150px;
+  justify-content: space-between;
+}
+
+.menu span > button {
+  height: 30px;
+  width: 120px;
+  color: #2874f0;
+  background-color: white;
+  font-weight: 600;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.menu span {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.menu span > a {
+  color: white;
+  text-decoration: none;
+  margin-left: 50px;
+}
+
+#fa_angle_down_icon {
+  color: #f1f3f6;
+  font-size: 10px;
+  margin: 5px 0 0 6px;
+}
+
+#fa_cart_shopping {
+  margin-right: 5px;
+}
