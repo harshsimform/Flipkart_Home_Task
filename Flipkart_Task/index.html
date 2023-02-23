@@ -341,5 +341,92 @@
       let width = carousel.offsetWidth;
       window.addEventListener("resize", (e) => (width = carousel.offsetWidth));
     </script>
+    <!-- All products section -->
+    <div class="products_section">
+      <div class="all_products_container">
+        <!-- this includes deals of the day, image slider and best of electronics section -->
+        <div class="main_header">
+          <div style="width: 150px; margin-left: 15px">
+            <p style="font-size: 18px">Deals of the Day</p>
+            <p style="color: gray; font-size: 14px; margin-top: 3px">
+              Shop Now!
+            </p>
+          </div>
+          <input
+            type="button"
+            value="VIEW ALL"
+            style="
+              color: white;
+              background-color: #2370f4;
+              box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%);
+              border-radius: 2px;
+              border: none;
+              height: 37px;
+              width: 100px;
+              cursor: pointer;
+              display: block;
+              margin: auto;
+              margin-right: 20px;
+              text-transform: uppercase;
+            "
+          />
+        </div>
+        <!-- this div tag includes products slider -->
+        <div class="slider_head">
+          <div id="wrapper">
+            <div id="carousel">
+              <!-- below div includes all the products images -->
+              <div id="content">
+                <div>
+                  <img
+                    src="Asset/Slider_section_imgs/camera.png"
+                    alt="Cameras"
+                  />
+                  <p id="head-3-box-title">Top Mirrorless Cameras</p>
+                  <p id="head-3-box-price">From ₹2,750</p>
+                  <p id="head-3-box-detail">Canon, Sony, Fujifilm...</p>
+                </div>
+                <div>
+                  <img
+                    src="Asset/Slider_section_imgs/monitor.png"
+                    alt="Monitors"
+                  />
+                  <p id="head-3-box-title">Monitors</p>
+                  <p id="head-3-box-price">SHOP NOW!</p>
+
+                  <p id="head-3-box-detail">Top Rated</p>
+                </div>
+                <div>
+                  <img
+                    src="Asset/Slider_section_imgs/projector.png"
+                    alt="Projector"
+                  />
+                  <p id="head-3-box-title">Projector</p>
+                  <p id="head-3-box-price">From ₹9,999</p>
+
+                  <p id="head-3-box-detail">Zebronics</p>
+                </div>
+                <div>
+                  <img
+                    src="Asset/Slider_section_imgs/printer.png"
+                    alt="Printer"
+                  />
+                  <p id="head-3-box-title">Printer</p>
+                  <p id="head-3-box-price">From ₹2,500</p>
+                  <p id="head-3-box-detail">HP</p>
+                </div>
+                <div>
+                  <img src="Asset/Slider_section_imgs/cycle.png" alt="Cycles" />
+                  <p id="head-3-box-title">Electric Cycles</p>
+                  <p id="head-3-box-price">Up to 40% Off</p>
+
+                  <p id="head-3-box-detail">Nuze Motovolt and More</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
