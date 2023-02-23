@@ -20,58 +20,64 @@
       href="Asset/Flipkart-Favicon2.png"
     />
     <link rel="stylesheet" href="index.css" />
-    <!-- <title>
-      Online Shopping Site for Mobiles, Electronics, Furniture, Grocery,
-      Lifestyle, Books & More. Best Offers!
-    </title> -->
+    <script src="timer.js"></script>
     <title>Flipkart</title>
   </head>
   <body>
     <!-- Navbar Section -->
-    <nav>
-      <div class="navbar">
-        <div class="flipkart_logo">
-          <img src="Asset/flipkart_nav_logo1.png" alt="Flipkart" />
+    <section class="nav_section">
+      <nav>
+        <div class="navbar">
+          <!-- Flipkart and Flipkart plus logo -->
+          <div class="flipkart_logo">
+            <img src="Asset/flipkart_nav_logo1.png" alt="Flipkart" />
+          </div>
+          <p class="flipkart_logo2">
+            <a href="/#"
+              >Explore
+              <span>Plus</span>
+              <img
+                src="Asset/flipkart_nav_logo2.png"
+                alt="flipkart_plus"
+                width="10"
+              />
+            </a>
+          </p>
         </div>
-        <p class="flipkart_logo2">
-          <a href="/#"
-            >Explore
-            <span>Plus</span>
-            <img
-              src="Asset/flipkart_nav_logo2.png"
-              alt="flipkart_plus"
-              width="10"
-            />
-          </a>
-        </p>
-      </div>
-      <div class="search_box">
-        <input type="text" placeholder="Search for products, brands and more" />
-        <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
-      </div>
-      <div class="menu">
-        <span><button type="submit">Login</button></span>
-        <span
-          ><a href=""
-            >More<i
-              class="fa-solid fa-angle-down"
-              id="fa_angle_down_icon"
-            ></i></a
-        ></span>
-        <span
-          ><a href=""
-            ><i
-              class="fa-sharp fa-solid fa-cart-shopping"
-              id="fa_cart_shopping"
-            ></i
-            >Cart</a
-          ></span
-        >
-      </div>
-    </nav>
+        <!-- Product search input -->
+        <div class="search_box">
+          <input
+            type="text"
+            placeholder="Search for products, brands and more"
+          />
+          <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+        </div>
+        <!-- Menu section conatining Login button and link to more and cart page -->
+        <div class="menu">
+          <span><button type="submit">Login</button></span>
+          <span
+            ><a href=""
+              >More<i
+                class="fa-solid fa-angle-down"
+                id="fa_angle_down_icon"
+              ></i></a
+          ></span>
+          <span
+            ><a href=""
+              ><i
+                class="fa-sharp fa-solid fa-cart-shopping"
+                id="fa_cart_shopping"
+              ></i
+              >Cart</a
+            ></span
+          >
+        </div>
+      </nav>
+    </section>
     <!-- main products section -->
     <section>
       <div class="main">
+        <!-- contains all the product category images with names -->
         <div class="product_boxes">
           <div class="product_box">
             <img src="Asset/Products_imgs/Top_Offers.png" alt="Top_Offers" />
@@ -149,5 +155,191 @@
         </div>
       </div>
     </section>
+    <!-- image slider section -->
+    <div class="products_section">
+      <div class="main_container">
+        <!-- this includes deals of the day, image slider and best of electronics section -->
+        <div class="main_header">
+          <p class="deals_title">Deals of the Day</p>
+          <img
+            src="https://img.icons8.com/color/48/null/coming-soon.png"
+            style="height: 30px; width: 30px; margin-left: 2%"
+          />
+          <!-- below p tag will show live timeleft count -->
+          <p id="timeleft"></p>
+          <input
+            type="button"
+            value="VIEW ALL"
+            style="
+              color: white;
+              background-color: #2370f4;
+              box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%);
+              border-radius: 2px;
+              border: none;
+              height: 37px;
+              width: 100px;
+              cursor: pointer;
+              display: block;
+              margin: auto;
+              margin-right: 20px;
+              text-transform: uppercase;
+            "
+          />
+        </div>
+        <!-- this div tag includes products slider -->
+        <div class="slider_head">
+          <div id="wrapper">
+            <div id="carousel">
+              <!-- below div includes all the products images -->
+              <div id="content">
+                <div>
+                  <img
+                    src="Asset/Slider_section_imgs/camera.png"
+                    alt="Cameras"
+                  />
+                  <p id="head-3-box-title">Top Mirrorless Cameras</p>
+                  <p id="head-3-box-price">From ₹2,750</p>
+                  <p id="head-3-box-detail">Canon, Sony, Fujifilm...</p>
+                </div>
+                <div>
+                  <img
+                    src="Asset/Slider_section_imgs/monitor.png"
+                    alt="Monitors"
+                  />
+                  <p id="head-3-box-title">Monitors</p>
+                  <p id="head-3-box-price">SHOP NOW!</p>
+
+                  <p id="head-3-box-detail">Top Rated</p>
+                </div>
+                <div>
+                  <img
+                    src="Asset/Slider_section_imgs/projector.png"
+                    alt="Projector"
+                  />
+                  <p id="head-3-box-title">Projector</p>
+                  <p id="head-3-box-price">From ₹9,999</p>
+
+                  <p id="head-3-box-detail">Zebronics</p>
+                </div>
+                <div>
+                  <img
+                    src="Asset/Slider_section_imgs/printer.png"
+                    alt="Printer"
+                  />
+                  <p id="head-3-box-title">Printer</p>
+                  <p id="head-3-box-price">From ₹2,500</p>
+                  <p id="head-3-box-detail">HP</p>
+                </div>
+                <div>
+                  <img src="Asset/Slider_section_imgs/cycle.png" alt="Cycles" />
+                  <p id="head-3-box-title">Electric Cycles</p>
+                  <p id="head-3-box-price">Up to 40% Off</p>
+
+                  <p id="head-3-box-detail">Nuze Motovolt and More</p>
+                </div>
+                <div>
+                  <img
+                    src="Asset/Slider_section_imgs/helmet.png"
+                    alt="Helmets"
+                  />
+                  <p id="head-3-box-title">Rider Helmets</p>
+                  <p id="head-3-box-price">From ₹699</p>
+                  <p id="head-3-box-detail">Explore Now!</p>
+                </div>
+                <div>
+                  <img
+                    src="Asset/Slider_section_imgs/monitor2.png"
+                    alt="Monitor"
+                  />
+                  <p id="head-3-box-title">Monitors</p>
+                  <p id="head-3-box-price">From ₹9,999</p>
+
+                  <p id="head-3-box-detail">SAMSUNG</p>
+                </div>
+                <div>
+                  <img
+                    src="Asset/Slider_section_imgs/mobile_covers.png"
+                    alt="Mobile Covers"
+                  />
+                  <p id="head-3-box-title">Plain Cases & Covers</p>
+                  <p id="head-3-box-price">Under ₹169</p>
+                  <p id="head-3-box-detail">For All Top Models</p>
+                </div>
+                <div>
+                  <img
+                    src="Asset/Slider_section_imgs/batman.png"
+                    alt="Tricycles & Rideons"
+                  />
+                  <p id="head-3-box-title">Tricycles & Rideons</p>
+                  <p id="head-3-box-price">Up to 70% Off</p>
+                  <p id="head-3-box-detail">Figurines, Battle Toys & more</p>
+                </div>
+                <div>
+                  <img
+                    src="Asset/Slider_section_imgs/gym_essentials.png"
+                    alt="Gym Essentials"
+                  />
+                  <p id="head-3-box-title">Gym Essentials</p>
+                  <p id="head-3-box-price">Under ₹139</p>
+                  <p id="head-3-box-detail">Shop Now</p>
+                </div>
+              </div>
+            </div>
+            <!-- below are the next and previous button to slide product images  -->
+            <button
+              id="next"
+              class="w3-button w3-black w3-display-left"
+              onclick="plusDivs(-1)"
+            >
+              <p id="carousel-arrow-next">&#10094;</p>
+            </button>
+            <button
+              id="prev"
+              class="w3-button w3-black w3-display-right"
+              onclick="plusDivs(1)"
+            >
+              <p id="carousel-arrow-prev">&#10095;</p>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- below div includes best_of_electronics section -->
+      <div class="best_of_electronics">
+        <p>Best Of Electronics</p>
+        <input type="submit" value="View all" />
+      </div>
+    </div>
+    <br />
+    <!-- Below is the JavaScript of slider_head i.e. products slider -->
+    <script>
+      const gap = 16;
+
+      const carousel = document.getElementById("carousel"),
+        content = document.getElementById("content"),
+        next = document.getElementById("next"),
+        prev = document.getElementById("prev");
+
+      prev.addEventListener("click", (e) => {
+        carousel.scrollBy(width + gap, 0);
+        if (carousel.scrollWidth !== 0) {
+          next.style.display = "flex";
+        }
+        if (content.scrollWidth - width - gap <= carousel.scrollLeft + width) {
+          prev.style.display = "none";
+        }
+      });
+      next.addEventListener("click", (e) => {
+        carousel.scrollBy(-(width + gap), 0);
+        if (carousel.scrollLeft - width - gap <= 0) {
+          next.style.display = "none";
+        }
+        if (!content.scrollWidth - width - gap <= carousel.scrollLeft + width) {
+          prev.style.display = "flex";
+        }
+      });
+
+      let width = carousel.offsetWidth;
+      window.addEventListener("resize", (e) => (width = carousel.offsetWidth));
+    </script>
   </body>
 </html>
