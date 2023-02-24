@@ -1,5 +1,5 @@
 // The data/time we want to countdown to
-var countDownDate = new Date("feb 28, 2023 16:34:52").getTime();
+var countDownDate = new Date("mar 5, 2023 16:34:52").getTime();
 
 // Run myfunc every second
 var myfunc = setInterval(function () {
