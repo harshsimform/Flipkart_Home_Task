@@ -150,7 +150,7 @@ nav {
 
 .main_container {
   height: 400px;
-  width: 85%;
+  width: 86%;
   box-sizing: border-box;
   display: block;
   margin: auto;
@@ -197,6 +197,7 @@ nav {
 .best_of_electronics {
   width: 14%;
   height: 400px;
+  margin-left: 15px;
   background-image: url("https://rukminim1.flixcart.com/fk-p-flap/278/278/image/7593e7b6640822c1.jpg?q=90");
   background-repeat: no-repeat;
   background-position: 0 bottom;
@@ -384,12 +385,83 @@ nav {
   color: #b9b1b1;
 }
 
-/* All products section */
-.all_products_container {
+/* All products container */
+.all_image_container {
+  width: 90%;
+  height: 400px;
+  margin: auto;
+  margin-top: 20px;
+  border: 1px solid white;
+}
+
+.shop_now {
   width: 100%;
-  height: 65px;
+  height: 85px;
+  border: 1px solid white;
   background-color: white;
+}
+
+.shop_now p {
+  margin-left: 20px;
+}
+
+.shop_now .title {
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.shop_now .shop {
+  margin-top: 5px;
+  color: #b9b1b1;
+}
+
+.all_imgs_head {
+  width: 100%;
+}
+
+.all_imgs_wrapper {
+  width: 100%;
+  max-width: 100%;
+  position: relative;
+  box-shadow: 0 -1px 5px 0 rgb(0 0 0 / 15%);
+}
+
+.all_imgs_carousel {
+  overflow: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  background-color: white;
+}
+
+.all_imgs_carousel::-webkit-scrollbar {
+  height: 0;
+}
+
+.all_imgs {
+  width: 100%;
+  height: 335px;
+  display: grid;
+  grid-gap: 16px;
+  grid-auto-flow: column;
+  margin: auto;
   box-sizing: border-box;
+  border: 1px solid white;
+  background-color: white;
+}
+
+.all_imgs img {
+  height: 190px;
+  width: 180px;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.all_imgs p {
   display: flex;
   align-items: center;
+  justify-content: center;
+}
+
+.footer {
+  height: 100px;
 }
