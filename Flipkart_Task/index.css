@@ -9,7 +9,7 @@ body {
   background-color: #f1f3f6;
 }
 
-/* Navbar Section */
+/* Start Navbar Section */
 .nav_section {
   width: 100%;
 }
@@ -46,6 +46,7 @@ nav {
   background-color: white;
   padding: 10px;
   height: 35px;
+  min-width: 350px;
   margin-left: 15px;
   color: #2370f4;
   box-shadow: 0 2px 4px 0 rgb(0 0 0 / 23%);
@@ -54,16 +55,21 @@ nav {
 }
 
 .search_box input {
-  width: 550px;
+  min-width: 500px;
   border: none;
   outline: none;
   font-size: 16px;
   cursor: pointer;
 }
 
+.menu_btns {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+
 .menu {
   margin-left: 150px;
-  justify-content: space-between;
 }
 
 .menu span > button {
@@ -98,12 +104,52 @@ nav {
 #fa_cart_shopping {
   margin-right: 5px;
 }
+/* End Navbar Section */
 
-/* main products section */
+/* Start Tooltip CSS */
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  font-size: 12px;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 150%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent black transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+/* End Tooltip CSS */
+
+/* Start main products section */
 .main {
   border: 2px solid aliceblue;
   background-color: white;
-  height: 115px;
+  width: 100%;
+  min-height: 112px;
   display: flex;
   justify-content: center;
   box-shadow: 0px 2px 7px -3px rgba(133, 133, 133, 0.73);
@@ -111,9 +157,51 @@ nav {
   -moz-box-shadow: 0px 2px 7px -3px rgba(133, 133, 133, 0.73);
 }
 
+/* CSS for dropdown */
+ul {
+  padding: 0;
+  list-style: none;
+  /* background: #f2f2f2; */
+}
+ul li {
+  display: inline-block;
+  position: relative;
+  line-height: 21px;
+  /* text-align: left; */
+}
+
+ul li a {
+  display: block;
+  padding: 8px 22px;
+  width: 200px;
+  color: #333;
+  text-decoration: none;
+}
+ul li ul.dropdown {
+  min-width: 100%; /* Set width of the dropdown */
+  background: #ffffff;
+  border: 2px solid #ffffff;
+  display: none;
+  position: absolute;
+  z-index: 999;
+  left: 0;
+  box-shadow: 4px 4px 11px -4px rgba(0, 0, 0, 0.53);
+  -webkit-box-shadow: 4px 4px 11px -4px rgba(0, 0, 0, 0.53);
+  -moz-box-shadow: 4px 4px 11px -4px rgba(0, 0, 0, 0.53);
+}
+ul li:hover ul.dropdown {
+  display: block; /* Display the dropdown */
+}
+ul li ul.dropdown li {
+  display: block;
+}
+/* CSS for dropdown */
+
 .product_boxes {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  height: auto;
   margin-top: 15px;
   width: 70%;
 }
@@ -137,9 +225,9 @@ nav {
   font-weight: bold;
   text-align: center;
 }
+/* End main products section */
 
-/* image slider section */
-
+/* Start image slider section */
 .products_section {
   display: flex;
   width: 90%;
@@ -207,7 +295,7 @@ nav {
 
 .best_of_electronics p {
   text-align: center;
-  margin-top: 60px;
+  margin-top: 80px;
   font-size: 30px;
   line-height: 1.38;
   font-weight: 400;
@@ -224,7 +312,7 @@ nav {
   cursor: pointer;
   display: block;
   margin: auto;
-  margin-top: 45px;
+  margin-top: 65px;
   text-transform: uppercase;
 }
 /* Image Slider */
@@ -384,8 +472,9 @@ nav {
   margin-top: 8px;
   color: #b9b1b1;
 }
+/* End image slider section */
 
-/* All products container */
+/* Start All products container */
 .all_image_container {
   width: 90%;
   height: 400px;
@@ -464,4 +553,111 @@ nav {
 
 .footer {
   height: 100px;
+}
+/* End All products container */
+
+/* Media Query for Responsiveness */
+/* Media Query for screen size less tha 1300px */
+@media only screen and (max-width: 1300px) {
+  /* Navbar section, Product search input */
+  .search_box input {
+    min-width: 300px;
+  }
+
+  /* main products section */
+  .main {
+    border: 2px solid aliceblue;
+    background-color: white;
+    width: 100%;
+    min-height: 240px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0px 2px 7px -3px rgba(133, 133, 133, 0.73);
+    -webkit-box-shadow: 0px 2px 7px -3px rgba(133, 133, 133, 0.73);
+    -moz-box-shadow: 0px 2px 7px -3px rgba(133, 133, 133, 0.73);
+  }
+
+  .product_box {
+    height: 60px;
+    width: 90px;
+    margin-top: 25px;
+  }
+
+  /* Image slider section */
+  /* below CSS will hide best_of_electronics section and main_container section will get 100% width */
+  .main_container {
+    width: 100%;
+  }
+  .best_of_electronics {
+    display: none;
+  }
+}
+
+/* Media Query for screen size less tha 1000px */
+@media only screen and (max-width: 1000px) {
+  /* Product search input */
+  /* This will hide More and Cart links for mobile users */
+  .menu button {
+    display: none;
+  }
+  .menu a {
+    display: none;
+  }
+  nav {
+    min-width: 700px;
+  }
+}
+
+/* Media Query for screen size less tha 665px */
+@media only screen and (max-width: 665px) {
+  /* navbar section input */
+  .navbar {
+    margin-left: -190px;
+  }
+
+  .search_box {
+    background-color: white;
+    padding: 10px;
+    height: 35px;
+    min-width: 210px;
+    margin-left: 15px;
+    color: #2370f4;
+    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 23%);
+    border-radius: 1px;
+    cursor: pointer;
+    display: flex;
+  }
+
+  .search_box input {
+    min-width: 150px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  /* main product section */
+  .main {
+    min-height: 385px;
+    display: flex;
+  }
+
+  /* all products section */
+  .shop_now p {
+    visibility: hidden;
+  }
+}
+
+/* Media Query for screen size less tha 410px */
+@media only screen and (max-width: 410px) {
+  /* main product section */
+  .main {
+    min-height: 580px;
+    display: flex;
+  }
+
+  /* Tooltip CSS */
+  .tooltiptext {
+    display: none;
+  }
 }
