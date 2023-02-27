@@ -55,10 +55,21 @@
         <!-- Menu section conatining Login button and link to more and cart page -->
         <div class="menu_btns">
           <div class="menu">
-            <span><button type="submit">Login</button></span>
+            <span
+              ><button type="submit">
+                <div class="tooltip">
+                  Login
+                  <span class="tooltiptext">Click here to login</span>
+                </div>
+              </button></span
+            >
             <span
               ><a href="#/more"
-                >More<i
+                ><div class="tooltip">
+                  More
+                  <span class="tooltiptext">More details</span>
+                </div>
+                <i
                   class="fa-solid fa-angle-down"
                   id="fa_angle_down_icon"
                 ></i></a
@@ -68,8 +79,11 @@
                 ><i
                   class="fa-sharp fa-solid fa-cart-shopping"
                   id="fa_cart_shopping"
-                ></i
-                >Cart</a
+                ></i>
+                <div class="tooltip">
+                  Cart
+                  <span class="tooltiptext">Add to cart</span>
+                </div></a
               ></span
             >
           </div>
@@ -378,14 +392,6 @@
                 src="Asset/Products_imgs/Beauty_Toys_More.png"
                 alt="Beauty_Toys_More"
               />
-              <!-- <a href="" style="text-decoration: none; color: black"
-                ><p>
-                  Beauty, Toys & More<i
-                    class="fa-solid fa-angle-down"
-                    id="fa_angle_down_icon"
-                    style="color: black"
-                  ></i></p
-              ></a> -->
               <ul>
                 <li>
                   <a
@@ -499,24 +505,28 @@
           />
           <!-- below p tag will show live timeleft count -->
           <p id="timeleft"></p>
-          <input
-            type="button"
-            value="VIEW ALL"
-            style="
-              color: white;
-              background-color: #2370f4;
-              box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%);
-              border-radius: 2px;
-              border: none;
-              height: 37px;
-              width: 100px;
-              cursor: pointer;
-              display: block;
-              margin: auto;
-              margin-right: 20px;
-              text-transform: uppercase;
-            "
-          />
+          <div class="tooltip" style="margin: auto; margin-right: 20px">
+            <button
+              type="submit"
+              style="
+                color: white;
+                background-color: #2370f4;
+                box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%);
+                border-radius: 2px;
+                border: none;
+                height: 37px;
+                width: 100px;
+                cursor: pointer;
+                display: block;
+                text-transform: uppercase;
+              "
+            >
+              view all
+            </button>
+            <span class="tooltiptext" style="margin-top: -15px; font-size: 12px"
+              >View all products</span
+            >
+          </div>
         </div>
         <!-- this div tag includes products slider -->
         <div class="slider_head">
@@ -566,17 +576,6 @@
                   <p id="head-3-box-detail">HP</p>
                 </div>
                 <div>
-                  <a href="#/hair-dryer" style="cursor: pointer">
-                    <img
-                      src="Asset/Slider_section_imgs/hair_dryer.png"
-                      alt="Best of Hair Dryers"
-                  /></a>
-                  <p id="head-3-box-title">Best of Hair Dryers</p>
-                  <p id="head-3-box-price">From ₹549</p>
-
-                  <p id="head-3-box-detail">Realme, Philips & more</p>
-                </div>
-                <div>
                   <a href="#/printers" style="cursor: pointer">
                     <img
                       src="Asset/Slider_section_imgs/printer2.png"
@@ -617,6 +616,17 @@
                   <p id="head-3-box-price">Shop Now</p>
                   <p id="head-3-box-detail">Mi, realme & more</p>
                 </div>
+                <div>
+                  <a href="#/hair-dryer" style="cursor: pointer">
+                    <img
+                      src="Asset/Slider_section_imgs/hair_dryer.png"
+                      alt="Best of Hair Dryers"
+                  /></a>
+                  <p id="head-3-box-title">Best of Hair Dryers</p>
+                  <p id="head-3-box-price">From ₹549</p>
+
+                  <p id="head-3-box-detail">Realme, Philips & more</p>
+                </div>
               </div>
             </div>
             <!-- below are the next and previous button to slide product images  -->
@@ -640,7 +650,31 @@
       <!-- below div includes best_of_electronics section -->
       <div class="best_of_electronics">
         <p>Best Of Electronics</p>
-        <input type="submit" value="View all" />
+        <!-- <input type="submit" value="View all" /> -->
+        <div class="tooltip" style="display: block; margin: auto">
+          <button
+            type="submit"
+            style="
+              color: white;
+              background-color: #2370f4;
+              box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%);
+              border-radius: 2px;
+              border: none;
+              height: 37px;
+              width: 100px;
+              cursor: pointer;
+              display: block;
+              margin: auto;
+              margin-top: 68px;
+              text-transform: uppercase;
+            "
+          >
+            view all
+          </button>
+          <span class="tooltiptext" style="margin-top: -15px; font-size: 12px"
+            >View all electronics products</span
+          >
+        </div>
       </div>
     </section>
     <br />
@@ -681,25 +715,33 @@
       <div class="shop_now">
         <p class="title">Books And music Instruments</p>
         <p class="shop">Shop Now!</p>
-        <input
-          type="button"
-          value="VIEW ALL"
-          style="
-            color: white;
-            background-color: #2370f4;
-            box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%);
-            border-radius: 2px;
-            border: none;
-            height: 37px;
-            width: 100px;
-            cursor: pointer;
-            display: block;
-            margin: auto;
-            margin-top: -45px;
-            margin-right: 20px;
-            text-transform: uppercase;
-          "
-        />
+        <div
+          class="tooltip"
+          style="margin: -45px 20px 0 0; display: flex; justify-content: end"
+        >
+          <button
+            type="submit"
+            style="
+              color: white;
+              background-color: #2370f4;
+              box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%);
+              border-radius: 2px;
+              border: none;
+              height: 37px;
+              width: 100px;
+              cursor: pointer;
+              display: block;
+              text-transform: uppercase;
+            "
+          >
+            view all
+          </button>
+          <span
+            class="tooltiptext"
+            style="margin-top: -15px; margin-left: 735px; font-size: 12px"
+            >View all books and music instruments</span
+          >
+        </div>
       </div>
       <!-- this div will include all images -->
       <div class="all_imgs_head">
@@ -711,77 +753,62 @@
               <div>
                 <a href="#/mobile" style="cursor: pointer">
                   <img
-                    src="Asset/Slider_section_imgs/mobile_covers.png"
-                    alt="Mobile"
+                    src="Asset/Books_and_Instruments/String_Instruments.png"
+                    alt="String Instruments"
                 /></a>
-                <p id="head-3-box-title">iphone X</p>
-                <p id="head-3-box-price">From ₹64,789</p>
-                <p id="head-3-box-detail">Apple</p>
+                <p id="head-3-box-title">String Instruments</p>
+                <p id="head-3-box-price">Up to 70% Off</p>
+                <p id="head-3-box-detail">Guitar, Ukuleles & more</p>
               </div>
               <div>
                 <a href="#/tricycle-rideons" style="cursor: pointer">
                   <img
-                    src="Asset/Slider_section_imgs/batman.png"
+                    src="Asset/Books_and_Instruments/Revel.png"
                     alt="Tricycles & Rideons"
                 /></a>
-                <p id="head-3-box-title">Tricycles & Rideons</p>
-                <p id="head-3-box-price">Up to 70% Off</p>
-                <p id="head-3-box-detail">Figurines, Battle Toys & more</p>
+                <p id="head-3-box-title">REVEL Soprano Ukulele</p>
+                <p id="head-3-box-price">Under ₹1,299</p>
+                <p id="head-3-box-detail">REVEL</p>
               </div>
               <div>
                 <a href="#/gym-essentials" style="cursor: pointer">
                   <img
-                    src="Asset/Slider_section_imgs/gym_essentials.png"
-                    alt="Gym Essentials"
+                    src="Asset/Books_and_Instruments/intern_guitar.png"
+                    alt="Intern Acoustic Guitar"
                 /></a>
-                <p id="head-3-box-title">Gym Essentials</p>
-                <p id="head-3-box-price">Under ₹139</p>
+                <p id="head-3-box-title">Intern Acoustic Guitar</p>
+                <p id="head-3-box-price">Under ₹2,397</p>
                 <p id="head-3-box-detail">Shop Now</p>
               </div>
               <div>
                 <a href="#/projector" style="cursor: pointer">
                   <img
-                    src="Asset/Slider_section_imgs/projector.png"
-                    alt="Projector"
+                    src="Asset/Books_and_Instruments/guitar_string.png"
+                    alt="Guitar String"
                 /></a>
-                <p id="head-3-box-title">Projector</p>
-                <p id="head-3-box-price">From ₹9,999</p>
-                <p id="head-3-box-detail">Zebronics</p>
+                <p id="head-3-box-title">ROAR Guitar String</p>
+                <p id="head-3-box-price">From ₹197</p>
+                <p id="head-3-box-detail">ROAR</p>
               </div>
               <div>
                 <a href="#/monitor" style="cursor: pointer">
                   <img
-                    src="Asset/Slider_section_imgs/monitor2.png"
-                    alt="Monitor"
+                    src="Asset/Books_and_Instruments/blueberry_guitar.png"
+                    alt="Blueberry Concert Ukulele"
                 /></a>
-                <p id="head-3-box-title">Monitors</p>
-                <p id="head-3-box-price">From ₹9,999</p>
-                <p id="head-3-box-detail">SAMSUNG</p>
+                <p id="head-3-box-title">Blueberry Concert Ukulele</p>
+                <p id="head-3-box-price">From ₹2,043</p>
+                <p id="head-3-box-detail">Blueberry</p>
               </div>
               <div>
                 <a href="#/elctric-cycle" style="cursor: pointer">
-                  <img src="Asset/Slider_section_imgs/cycle.png" alt="Cycles"
+                  <img
+                    src="Asset/Books_and_Instruments/Neowood_accoustic_guitar.png"
+                    alt="Neowood Acoustic Guitar"
                 /></a>
-                <p id="head-3-box-title">Electric Cycles</p>
-                <p id="head-3-box-price">Up to 40% Off</p>
-                <p id="head-3-box-detail">Nuze Motovolt and More</p>
-              </div>
-              <!-- <div>
-                <img
-                  src="Asset/Slider_section_imgs/printer.png"
-                  alt="Printer"
-                />
-                <p id="head-3-box-title">Printer</p>
-                <p id="head-3-box-price">From ₹2,500</p>
-                <p id="head-3-box-detail">HP</p>
-              </div> -->
-              <div>
-                <a href="#/power-banks" style="cursor: pointer">
-                  <img src="Asset/Slider_section_imgs/helmet.png" alt="Helmets"
-                /></a>
-                <p id="head-3-box-title">Rider Helmets</p>
-                <p id="head-3-box-price">From ₹699</p>
-                <p id="head-3-box-detail">Explore Now!</p>
+                <p id="head-3-box-title">Neowood Acoustic Guitar</p>
+                <p id="head-3-box-price">From ₹5,199</p>
+                <p id="head-3-box-detail">Neowood</p>
               </div>
             </div>
           </div>
