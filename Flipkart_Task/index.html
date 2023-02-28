@@ -30,10 +30,12 @@
         <div class="navbar">
           <!-- Flipkart and Flipkart plus logo -->
           <div class="flipkart_logo">
-            <img src="Asset/flipkart_nav_logo1.png" alt="Flipkart" />
+            <a href="https://www.flipkart.com/" target="_blank"
+              ><img src="Asset/flipkart_nav_logo1.png" alt="Flipkart"
+            /></a>
           </div>
           <p class="flipkart_logo2">
-            <a href="#/"
+            <a href="https://www.flipkart.com/plus"
               >Explore
               <span>Plus</span>
               <img
@@ -50,40 +52,52 @@
             type="text"
             placeholder="Search for products, brands and more"
           />
-          <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+          <i
+            class="fa-sharp fa-solid fa-magnifying-glass"
+            style="cursor: pointer"
+          ></i>
         </div>
         <!-- Menu section conatining Login button and link to more and cart page -->
         <div class="menu_btns">
           <div class="menu">
             <span
               ><button type="submit">
-                <div class="tooltip">
+                <div>
                   Login
-                  <span class="tooltiptext">Click here to login</span>
                 </div>
               </button></span
             >
-            <span
+            <!-- <span
               ><a href="#/more"
                 ><div class="tooltip">
-                  More
-                  <span class="tooltiptext">More details</span>
+                  <p class="more">More<span class="arrow"></span></p>
+                  <span class="tooltiptext" ><p>More details</p></span>
                 </div>
-                <i
+              </a>
+            </span> -->
+                <!-- <i
                   class="fa-solid fa-angle-down"
                   id="fa_angle_down_icon"
                 ></i></a
-            ></span>
+            ></span> -->
+            
+            <span><div class="more_dropdown">
+              <button class="dropbtn">More<span class="arrow"></span></button>
+              <div class="dropdown-content">
+              <a href="#"><i class="fa-solid fa-bell"></i> Notification Preferences</a>
+              <a href="#"><i class="fa-solid fa-comments"></i> 24x7 Customer Care</a>
+              <a href="#"><i class="fa-solid fa-chart-line"></i> Advertise</a>
+              <a href="#"><i class="fa-solid fa-download"></i> Download App</a>
+              </div>
+            </div></span>
             <span
               ><a href="#/cart"
                 ><i
                   class="fa-sharp fa-solid fa-cart-shopping"
                   id="fa_cart_shopping"
                 ></i>
-                <div class="tooltip">
                   Cart
-                  <span class="tooltiptext">Add to cart</span>
-                </div></a
+                </a
               ></span
             >
           </div>
@@ -100,8 +114,6 @@
               <img src="Asset/Products_imgs/Top_Offers.png" alt="Top_Offers" />
               <a
                 href="#/top-offers"
-                onMouseOver="this.style.color='#626261'"
-                onMouseOut="this.style.color='black'"
                 style="text-decoration: none; color: black"
                 ><p style="margin-top: 1px">Top Offers</p></a
               >
@@ -109,9 +121,7 @@
             <div class="product_box">
               <img src="Asset/Products_imgs/Grocery.png" alt="Grocery" />
               <a
-                href="#/grocery"
-                onMouseOver="this.style.color='#626261'"
-                onMouseOut="this.style.color='black'"
+                href="#/grocery"               
                 style="text-decoration: none; color: black"
                 ><p style="margin-top: 1px">Grocery</p></a
               >
@@ -119,97 +129,77 @@
             <div class="product_box">
               <img src="Asset/Products_imgs/Mobiles.png" alt="Mobiles" />
               <a
-                href="#/mobiles"
-                onMouseOver="this.style.color='#626261'"
-                onMouseOut="this.style.color='black'"
+                href="#/mobiles"                
                 style="text-decoration: none; color: black"
                 ><p style="margin-top: 1px">Mobiles</p></a
               >
             </div>
-            <div class="product_box">
-              <img
-                src="Asset/Products_imgs/Fashion.png"
-                style="height: 53px"
-                alt="Fashion"
-              />
-              <ul>
-                <li>
-                  <a
-                    href="#/fashion"
-                    onMouseOver="this.style.color='#626261'"
-                    onMouseOut="this.style.color='black'"
-                    style="
-                      text-decoration: none;
-                      color: black;
-                      margin-top: -2px;
-                    "
-                  >
-                    <p>
-                      <span style="margin-left: -40px">Fashion</span
-                      ><i
-                        class="fa-solid fa-angle-down"
-                        id="fa_angle_down_icon"
-                        style="color: black"
-                      ></i></p
-                  ></a>
-                  <ul class="dropdown">
-                    <li>
-                      <a
-                        onMouseOver="this.style.color='#2370f4'"
-                        onMouseOut="this.style.color='black'"
-                        style="font-size: 15px"
-                        href="#/mens-top-wear"
-                        >Men's Top Wear</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        onMouseOver="this.style.color='#2370f4'"
-                        onMouseOut="this.style.color='black'"
-                        style="font-size: 15px"
-                        href="#/mens-bottom-wear"
-                        >Men's Bottom Wear</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        onMouseOver="this.style.color='#2370f4'"
-                        onMouseOut="this.style.color='black'"
-                        style="font-size: 15px"
-                        href="#/women-ethnic"
-                        >Women Ethnic</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        onMouseOver="this.style.color='#2370f4'"
-                        onMouseOut="this.style.color='black'"
-                        style="font-size: 15px"
-                        href="#/women-western"
-                        >Women Western</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        onMouseOver="this.style.color='#2370f4'"
-                        onMouseOut="this.style.color='black'"
-                        style="font-size: 15px"
-                        href="#/men-footwear"
-                        >Men Footwear</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        onMouseOver="this.style.color='#2370f4'"
-                        onMouseOut="this.style.color='black'"
-                        style="font-size: 15px"
-                        href="#/winter-wear"
-                        >Winter Wear</a
-                      >
-                    </li>
-                  </ul>
-                </li>
-              </ul>
+            <div class="product_box">            
+                <img
+                  src="Asset/Products_imgs/Fashion.png"
+                  style="height: 53px"
+                  alt="Fashion"
+                />
+                <ul>
+                  <li>
+                    <a
+                      href="#/fashion"                     
+                      style="
+                        text-decoration: none;
+                        color: black;
+                        margin-top: -2px;
+                      "
+                    >
+                      <p>
+                        <span style="margin-left: -40px">Fashion</span
+                        ><span class="arrow"></span></p
+                    ></a>
+                    <ul class="dropdown">
+                      <li>
+                        <a                        
+                          style="font-size: 15px"
+                          href="#/mens-top-wear"
+                          >Men's Top Wear</a
+                        >
+                      </li>
+                      <li>
+                        <a                       
+                          style="font-size: 15px"
+                          href="#/mens-bottom-wear"
+                          >Men's Bottom Wear</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          style="font-size: 15px"
+                          href="#/women-ethnic"
+                          >Women Ethnic</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          style="font-size: 15px"
+                          href="#/women-western"
+                          >Women Western</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          style="font-size: 15px"
+                          href="#/men-footwear"
+                          >Men Footwear</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          style="font-size: 15px"
+                          href="#/winter-wear"
+                          >Winter Wear</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
             </div>
             <div class="product_box">
               <img
@@ -220,8 +210,6 @@
                 <li>
                   <a
                     href="#/electronics"
-                    onMouseOver="this.style.color='#626261'"
-                    onMouseOut="this.style.color='black'"
                     style="
                       text-decoration: none;
                       color: black;
@@ -230,17 +218,12 @@
                   >
                     <p>
                       <span style="margin-left: -40px">Electronics</span
-                      ><i
-                        class="fa-solid fa-angle-down"
-                        id="fa_angle_down_icon"
-                        style="color: black"
-                      ></i></p
+                      ></span
+                      ><span class="arrow"></span></p
                   ></a>
                   <ul class="dropdown">
                     <li>
                       <a
-                        onMouseOver="this.style.color='#2370f4'"
-                        onMouseOut="this.style.color='black'"
                         style="font-size: 15px"
                         href="#"
                         >Electronics GST Store</a
@@ -248,8 +231,6 @@
                     </li>
                     <li>
                       <a
-                        onMouseOver="this.style.color='#2370f4'"
-                        onMouseOut="this.style.color='black'"
                         style="font-size: 15px"
                         href="#/gaming"
                         >Gaming</a
@@ -257,8 +238,6 @@
                     </li>
                     <li>
                       <a
-                        onMouseOver="this.style.color='#2370f4'"
-                        onMouseOut="this.style.color='black'"
                         style="font-size: 15px"
                         href="#/power-bank"
                         >Power Bank</a
@@ -266,8 +245,6 @@
                     </li>
                     <li>
                       <a
-                        onMouseOver="this.style.color='#2370f4'"
-                        onMouseOut="this.style.color='black'"
                         style="font-size: 15px"
                         href="#/smart-wearables"
                         >Smart Wearables</a
@@ -275,8 +252,6 @@
                     </li>
                     <li>
                       <a
-                        onMouseOver="this.style.color='#2370f4'"
-                        onMouseOut="this.style.color='black'"
                         style="font-size: 15px"
                         href="#/smart-tablets"
                         >Tablets</a
@@ -292,8 +267,6 @@
                 <li>
                   <a
                     href="#/home"
-                    onMouseOver="this.style.color='#626261'"
-                    onMouseOut="this.style.color='black'"
                     style="
                       text-decoration: none;
                       color: black;
@@ -302,17 +275,12 @@
                   >
                     <p>
                       <span style="margin-left: -40px">Home</span
-                      ><i
-                        class="fa-solid fa-angle-down"
-                        id="fa_angle_down_icon"
-                        style="color: black"
-                      ></i></p
+                      ></span
+                      ><span class="arrow"></span></p
                   ></a>
                   <ul class="dropdown">
                     <li>
                       <a
-                        onMouseOver="this.style.color='#2370f4'"
-                        onMouseOut="this.style.color='black'"
                         style="font-size: 15px"
                         href="#/home-furniture"
                         >Home Furnishings</a
@@ -320,8 +288,6 @@
                     </li>
                     <li>
                       <a
-                        onMouseOver="this.style.color='#2370f4'"
-                        onMouseOut="this.style.color='black'"
                         style="font-size: 15px"
                         href="#/furniture-studio"
                         >Furniture Studio</a
@@ -329,8 +295,6 @@
                     </li>
                     <li>
                       <a
-                        onMouseOver="this.style.color='#2370f4'"
-                        onMouseOut="this.style.color='black'"
                         style="font-size: 15px"
                         href="#/kitchen-dining"
                         >Kitchen & Dining</a
@@ -338,8 +302,6 @@
                     </li>
                     <li>
                       <a
-                        onMouseOver="this.style.color='#2370f4'"
-                        onMouseOut="this.style.color='black'"
                         style="font-size: 15px"
                         href="#/home-decor"
                         >Home Decor</a
@@ -347,8 +309,6 @@
                     </li>
                     <li>
                       <a
-                        onMouseOver="this.style.color='#2370f4'"
-                        onMouseOut="this.style.color='black'"
                         style="font-size: 15px"
                         href="#/tools-utilities"
                         >Tools & Utilities</a
@@ -356,8 +316,6 @@
                     </li>
                     <li>
                       <a
-                        onMouseOver="this.style.color='#2370f4'"
-                        onMouseOut="this.style.color='black'"
                         style="font-size: 15px"
                         href="#/cleaning-bath"
                         >Cleaning & Bath</a
@@ -371,8 +329,6 @@
               <img src="Asset/Products_imgs/Appliances.png" alt="Appliances" />
               <a
                 href="#/Appliances"
-                onMouseOver="this.style.color='#626261'"
-                onMouseOut="this.style.color='black'"
                 style="text-decoration: none; color: black"
                 ><p style="margin-top: 1px">Appliances</p></a
               >
@@ -381,8 +337,6 @@
               <img src="Asset/Products_imgs/Travel.png" alt="Travel" />
               <a
                 href="#/travel"
-                onMouseOver="this.style.color='#626261'"
-                onMouseOut="this.style.color='black'"
                 style="text-decoration: none; color: black"
                 ><p style="margin-top: 1px">Travel</p></a
               >
@@ -396,8 +350,6 @@
                 <li>
                   <a
                     href="#/beauty-toys-more"
-                    onMouseOver="this.style.color='#626261'"
-                    onMouseOut="this.style.color='black'"
                     style="
                       text-decoration: none;
                       color: black;
@@ -406,82 +358,63 @@
                   >
                     <p>
                       <span style="margin-left: -40px">Beauty, Toys & More</span
-                      ><i
-                        class="fa-solid fa-angle-down"
-                        id="fa_angle_down_icon"
-                        style="color: black"
-                      ></i></p
+                      ></span
+                      ><span class="arrow"></span></p
                   ></a>
                   <ul class="dropdown">
                     <li>
                       <a
-                        onMouseOver="this.style.color='#2370f4'"
-                        onMouseOut="this.style.color='black'"
                         style="font-size: 15px"
-                        href="#"
+                        href="#/mens-grooming"
                         >Men's Grooming</a
                       >
                     </li>
                     <li>
                       <a
-                        onMouseOver="this.style.color='#2370f4'"
-                        onMouseOut="this.style.color='black'"
                         style="font-size: 15px"
-                        href="#"
+                        href="#/food-and-drinks"
                         >Food & Drinks</a
                       >
                     </li>
                     <li>
                       <a
-                        onMouseOver="this.style.color='#2370f4'"
-                        onMouseOut="this.style.color='black'"
                         style="font-size: 15px"
-                        href="#"
+                        href="#/baby-care"
                         >Baby Care</a
                       >
                     </li>
                     <li>
                       <a
-                        onMouseOver="this.style.color='#2370f4'"
-                        onMouseOut="this.style.color='black'"
                         style="font-size: 15px"
-                        href="#"
+                        href="#/sports-and-fitness"
                         >Sports & Fitness</a
                       >
                     </li>
                     <li>
                       <a
-                        onMouseOver="this.style.color='#2370f4'"
-                        onMouseOut="this.style.color='black'"
                         style="font-size: 15px"
-                        href="#"
+                        href="#/books"
                         >Books</a
                       >
                     </li>
                     <li>
                       <a
-                        onMouseOver="this.style.color='#2370f4'"
-                        onMouseOut="this.style.color='black'"
                         style="font-size: 15px"
-                        href="#"
+                        href="#/music"
                         >Music</a
                       >
                     </li>
                     <li>
                       <a
-                        onMouseOver="this.style.color='#2370f4'"
-                        onMouseOut="this.style.color='black'"
                         style="font-size: 15px"
-                        href="#"
+                        href="#/keychains"
                         >Keychains</a
                       >
                     </li>
                     <li>
                       <a
-                        onMouseOver="this.style.color='#2370f4'"
-                        onMouseOut="this.style.color='black'"
                         style="font-size: 15px"
-                        href="#"
+                        href="#/card-holders"
                         >Card Holders</a
                       >
                     </li>
@@ -498,7 +431,7 @@
       <div class="main_container">
         <!-- this includes deals of the day, image slider and best of electronics section -->
         <div class="main_header">
-          <p class="deals_title">Deals of the Day</p>
+          <p class="deals_title" style="background-color: transparent;">Deals of the Day</p>
           <img
             src="https://img.icons8.com/color/48/null/coming-soon.png"
             style="height: 30px; width: 30px; margin-left: 2%"
@@ -523,9 +456,7 @@
             >
               view all
             </button>
-            <span class="tooltiptext" style="margin-top: -15px; font-size: 12px"
-              >View all products</span
-            >
+            
           </div>
         </div>
         <!-- this div tag includes products slider -->
@@ -651,7 +582,7 @@
       <div class="best_of_electronics">
         <p>Best Of Electronics</p>
         <!-- <input type="submit" value="View all" /> -->
-        <div class="tooltip" style="display: block; margin: auto">
+        <div>
           <button
             type="submit"
             style="
@@ -671,9 +602,7 @@
           >
             view all
           </button>
-          <span class="tooltiptext" style="margin-top: -15px; font-size: 12px"
-            >View all electronics products</span
-          >
+          
         </div>
       </div>
     </section>
@@ -715,33 +644,25 @@
       <div class="shop_now">
         <p class="title">Books And music Instruments</p>
         <p class="shop">Shop Now!</p>
-        <div
-          class="tooltip"
-          style="margin: -45px 20px 0 0; display: flex; justify-content: end"
-        >
-          <button
-            type="submit"
-            style="
-              color: white;
-              background-color: #2370f4;
-              box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%);
-              border-radius: 2px;
-              border: none;
-              height: 37px;
-              width: 100px;
-              cursor: pointer;
-              display: block;
-              text-transform: uppercase;
-            "
-          >
-            view all
-          </button>
-          <span
-            class="tooltiptext"
-            style="margin-top: -15px; margin-left: 735px; font-size: 12px"
-            >View all books and music instruments</span
-          >
-        </div>
+        <input
+          type="button"
+          value="VIEW ALL"
+          style="
+            color: white;
+            background-color: #2370f4;
+            box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%);
+            border-radius: 2px;
+            border: none;
+            height: 37px;
+            width: 100px;
+            cursor: pointer;
+            display: block;
+            margin: auto;
+            margin-top: -45px;
+            margin-right: 20px;
+            text-transform: uppercase;
+          "
+        />
       </div>
       <!-- this div will include all images -->
       <div class="all_imgs_head">

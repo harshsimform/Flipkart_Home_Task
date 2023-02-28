@@ -2,6 +2,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scrollbar-width: none;
+}
+
+::-webkit-scrollbar {
+  width: 0;
 }
 
 body {
@@ -12,10 +17,11 @@ body {
 /* Start Navbar Section */
 .nav_section {
   width: 100%;
+  background-color: #2874f0;
 }
 
 nav {
-  height: 50px;
+  height: 52px;
   background-color: #2874f0;
   display: flex;
   justify-content: center;
@@ -37,6 +43,10 @@ nav {
   text-decoration: none;
 }
 
+.flipkart_logo2:hover {
+  text-decoration: underline;
+}
+
 .flipkart_logo2 span {
   color: #ffe500;
   font-weight: 600;
@@ -46,26 +56,28 @@ nav {
   background-color: white;
   padding: 10px;
   height: 35px;
-  min-width: 350px;
+  width: 500px;
   margin-left: 15px;
+  margin-top: 3px;
   color: #2370f4;
   box-shadow: 0 2px 4px 0 rgb(0 0 0 / 23%);
   border-radius: 1px;
-  cursor: pointer;
+  cursor: auto;
 }
 
 .search_box input {
-  min-width: 500px;
+  width: 458px;
   border: none;
   outline: none;
   font-size: 16px;
-  cursor: pointer;
+  cursor: auto;
 }
 
 .menu_btns {
   justify-content: space-between;
   align-items: center;
   display: flex;
+  margin-top: 3px;
 }
 
 .menu {
@@ -95,6 +107,63 @@ nav {
   margin-left: 50px;
 }
 
+/* Drop-down of More button */
+.dropbtn {
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  font-weight: 600;
+
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  position: relative;
+}
+
+.more_dropdown:hover .arrow {
+  margin-top: 3px;
+  transform: rotateZ(-225deg);
+}
+
+.more_dropdown {
+  position: relative;
+  display: inline-block;
+  margin-left: 40px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: -85px;
+  background-color: white;
+  min-width: 250px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content i {
+  color: #2874f0;
+  margin-right: 5px;
+}
+
+.dropdown-content a {
+  font-size: 14px;
+  font-weight: 500;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  border-bottom: 2px solid #f1f3f6;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f3f6;
+}
+
+.more_dropdown:hover .dropdown-content {
+  display: block;
+}
+
 #fa_angle_down_icon {
   color: #f1f3f6;
   font-size: 10px;
@@ -105,44 +174,6 @@ nav {
   margin-right: 5px;
 }
 /* End Navbar Section */
-
-/* Start Tooltip CSS */
-.tooltip {
-  position: relative;
-  display: inline-block;
-}
-
-.tooltip .tooltiptext {
-  visibility: hidden;
-  width: 120px;
-  background-color: black;
-  color: #fff;
-  font-size: 12px;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
-  position: absolute;
-  z-index: 1;
-  top: 150%;
-  left: 50%;
-  margin-left: -60px;
-}
-
-.tooltip .tooltiptext::after {
-  content: "";
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: transparent transparent black transparent;
-}
-
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-}
-/* End Tooltip CSS */
 
 /* Start main products section */
 .main {
@@ -177,6 +208,12 @@ ul li a {
   color: #333;
   text-decoration: none;
 }
+
+.dropdown li a:hover {
+  color: #2370f4;
+  background-color: #f1f3f6;
+}
+
 ul li ul.dropdown {
   min-width: 100%; /* Set width of the dropdown */
   background: #ffffff;
@@ -189,14 +226,17 @@ ul li ul.dropdown {
   -webkit-box-shadow: 4px 4px 11px -4px rgba(0, 0, 0, 0.53);
   -moz-box-shadow: 4px 4px 11px -4px rgba(0, 0, 0, 0.53);
 }
-ul li:hover ul.dropdown {
+
+.product_boxes .product_box:hover ul.dropdown {
   display: block; /* Display the dropdown */
 }
+
 ul li ul.dropdown li {
   display: block;
+  border-bottom: 1px solid #f1f3f6;
 }
-/* CSS for dropdown */
 
+/* CSS for dropdown */
 .product_boxes {
   display: flex;
   justify-content: space-between;
@@ -211,12 +251,41 @@ ul li ul.dropdown li {
   width: 90px;
 }
 
+.product_box:hover .arrow {
+  margin-top: 3px;
+  transform: rotateZ(-225deg);
+  color: #2874f0;
+}
+
+.product_box:hover p {
+  color: #2874f0;
+}
+
+.arrow {
+  width: 0.5em;
+  height: 0.5em;
+  display: inline-block;
+  vertical-align: middle;
+  border-left: 0.16em solid currentColor;
+  border-bottom: 0.16em solid currentColor;
+  transform: rotate(-45deg);
+  margin-left: 9px;
+  margin-top: -4px;
+  transition: transform 100ms ease-in-out;
+}
+
+.product_box:hover .arrow {
+  margin-top: 3px;
+  transform: rotateZ(-225deg);
+}
+
 .product_box img {
   width: 65px;
   height: 100%;
   object-fit: cover;
   margin-left: 17px;
   background-color: white;
+  cursor: pointer;
 }
 
 .product_box p {
@@ -315,8 +384,8 @@ ul li ul.dropdown li {
   margin-top: 65px;
   text-transform: uppercase;
 }
-/* Image Slider */
 
+/* Image Slider */
 .slider_head {
   width: 100%;
   height: 335px;
@@ -338,6 +407,7 @@ ul li ul.dropdown li {
   overflow: auto;
   scroll-behavior: smooth;
   scrollbar-width: none;
+  height: 300px;
 }
 
 #carousel::-webkit-scrollbar {
@@ -405,9 +475,17 @@ ul li ul.dropdown li {
 }
 
 #content img {
-  height: 190px;
-  width: 180px;
+  height: 180px;
+  width: 170px;
   margin-left: 20px;
+  margin-top: 15px;
+  transition: transform 0.2s;
+}
+
+#content img:hover {
+  -ms-transform: scale(1.04); /* IE 9 */
+  -webkit-transform: scale(1.04); /* Safari 3-8 */
+  transform: scale(1.04);
 }
 
 #content p {
@@ -543,6 +621,13 @@ ul li ul.dropdown li {
   width: 180px;
   margin-top: 20px;
   margin-left: 20px;
+  transition: transform 0.2s;
+}
+
+.all_imgs img:hover {
+  -ms-transform: scale(1.04); /* IE 9 */
+  -webkit-transform: scale(1.04); /* Safari 3-8 */
+  transform: scale(1.04);
 }
 
 .all_imgs p {
@@ -560,10 +645,6 @@ ul li ul.dropdown li {
 /* Media Query for screen size less tha 1300px */
 @media only screen and (max-width: 1300px) {
   /* Navbar section, Product search input */
-  .search_box input {
-    min-width: 300px;
-  }
-
   /* main products section */
   .main {
     border: 2px solid aliceblue;
@@ -611,15 +692,17 @@ ul li ul.dropdown li {
 /* Media Query for screen size less tha 665px */
 @media only screen and (max-width: 665px) {
   /* navbar section input */
+
   .navbar {
     margin-left: -190px;
+    position: relative;
   }
 
   .search_box {
     background-color: white;
     padding: 10px;
     height: 35px;
-    min-width: 210px;
+    width: 200px;
     margin-left: 15px;
     color: #2370f4;
     box-shadow: 0 2px 4px 0 rgb(0 0 0 / 23%);
@@ -629,7 +712,7 @@ ul li ul.dropdown li {
   }
 
   .search_box input {
-    min-width: 150px;
+    width: 170px;
     border: none;
     outline: none;
     font-size: 16px;
