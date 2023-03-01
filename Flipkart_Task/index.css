@@ -534,9 +534,14 @@ ul li ul.dropdown li {
   cursor: pointer;
 }
 
-#head-3-box-title {
+.content-img {
+  text-decoration: none;
+}
+
+.content-img #head-3-box-title {
   font-size: 16px;
   margin-top: 20px;
+  color: black;
 }
 
 #head-3-box-price {
@@ -617,7 +622,7 @@ ul li ul.dropdown li {
 }
 
 .all_imgs img {
-  height: 190px;
+  height: 200px;
   width: 180px;
   margin-top: 20px;
   margin-left: 20px;
@@ -634,6 +639,8 @@ ul li ul.dropdown li {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 15px;
+  margin-left: -50px;
 }
 
 .footer {
@@ -728,6 +735,10 @@ ul li ul.dropdown li {
   /* all products section */
   .shop_now p {
     visibility: hidden;
+  }
+
+  .all_imgs p {
+    margin-left: 0px;
   }
 }
 
