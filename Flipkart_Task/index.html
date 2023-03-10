@@ -546,6 +546,17 @@
                   <p id="head-3-box-price">From ₹549</p>
                   <p id="head-3-box-detail">Realme, Philips & more</p></a>
                 </div>
+                <div>
+                  <a href="#/hair-dryer" style="cursor: pointer">
+                    <img
+                      src="Asset/Slider_section_imgs/hair_dryer.png"
+                      alt="Best of Hair Dryers"
+                  /></a>
+                  <p id="head-3-box-title">Best of Hair Dryers</p>
+                  <p id="head-3-box-price">From ₹549</p>
+
+                  <p id="head-3-box-detail">Realme, Philips & more</p>
+                </div>
               </div>
             </div>
             <!-- below are the next and previous button to slide product images  -->
@@ -630,25 +641,33 @@
       <div class="shop_now">
         <p class="title">Books And music Instruments</p>
         <p class="shop">Shop Now!</p>
-        <input
-          type="button"
-          value="VIEW ALL"
-          style="
-            color: white;
-            background-color: #2370f4;
-            box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%);
-            border-radius: 2px;
-            border: none;
-            height: 37px;
-            width: 100px;
-            cursor: pointer;
-            display: block;
-            margin: auto;
-            margin-top: -45px;
-            margin-right: 20px;
-            text-transform: uppercase;
-          "
-        />
+        <div
+          class="tooltip"
+          style="margin: -45px 20px 0 0; display: flex; justify-content: end"
+        >
+          <button
+            type="submit"
+            style="
+              color: white;
+              background-color: #2370f4;
+              box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%);
+              border-radius: 2px;
+              border: none;
+              height: 37px;
+              width: 100px;
+              cursor: pointer;
+              display: block;
+              text-transform: uppercase;
+            "
+          >
+            view all
+          </button>
+          <span
+            class="tooltiptext"
+            style="margin-top: -15px; margin-left: 735px; font-size: 12px"
+            >View all books and music instruments</span
+          >
+        </div>
       </div>
       <!-- this div will include all images -->
       <div class="all_imgs_head">
